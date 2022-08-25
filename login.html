@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 체크</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <div class="loginbox">
+        <form action="#void" method="post">
+            <h2>
+                <a href="index.html"><img src="images/ATLogo.png" alt=""></a>
+                <a href="index.html">American Travel</a>
+            </h2>
+            <div class="inputBox">
+                <input class="textInput" type="text" placeholder="아이디를 입력하세요">
+                <input class="pwdInput" type="password" id="pswrd" placeholder="패스워드를 입력하세요."
+                    onkeyup="CheckPassword(this.value)">
+                <span id="toggleBtn"></span>
+            </div>
+            <div class="validation">
+                <ul>
+                    <li id="lower">하나 이상의 소문자를 입력해주세요.</li>
+                    <li id="upper">하나 이상의 대문자를 입력해주세요.</li>
+                    <li id="number">하나 이상의 숫자를 입력해주세요.</li>
+                    <li id="special">하나 이상의 특수문자를 입력해주세요.</li>
+                    <li id="length">최소 8자 이상 입력해주세요.</li>
+                </ul>
+            </div>
+            <div class="loginButton">
+                <input type='submit' value="로그인">
+            </div>
+            <div class="bottomInfo">
+                <ul class="loginHelp">
+                    <li>비밀번호 찾기</li>
+                    <li>아이디 찾기</li>
+                    <li>회원가입</li>
+                </ul>
+            </div>
+        </form>
+        <footer>
+            <ul class="footerNav web">
+                <li><a href="#void">회사소개</a></li>
+                <li><a href="#void">이용약관</a></li>
+                <li><a href="#void">개인정보처리방침</a></li>
+                <li><a href="#void">서비스약관</a></li>
+                <li><a href="#void">고객문의</a></li>
+                <li><a href="#void">회사이념</a></li>
+            </ul>
+            <ul class="footerNav mobile">
+                <li>
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">서비스이용약관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">고객문의</a></li>
+                        <li><a href="#">회사이념</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="footerAddress">
+                <li>법인명:(주)아메리카 트레블 대표자:김민국 사업자등록번호 2xx-x7-213x4</li>
+                <li>주소:서울특별시 관악구 신림로 8x8 대한빌딩 12층 (관악동) 대표전화 : 02-5x38-x100</li>
+            </ul>
+            <div>
+                <h3 class="footerTitle"><a href="#">American Travel</a></h3>
+                <div class="footerCopyright">Copyright ⓒ 2013 AMERICAN TRAVEL KOREA Company. All Rights Reserve</div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/passwordCheck.js"></script>
+</body>
+
+</html>

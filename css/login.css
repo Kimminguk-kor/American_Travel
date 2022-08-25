@@ -1,0 +1,190 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-weight: bold;
+    list-style: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+}
+body{
+    background-image: url(../images/flagBg1920x1080.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    max-width: 1920px;
+    max-height: 1080px;
+    width:100%;
+    height:100vh;
+    left:0;
+    top:0;
+}
+.loginbox{
+    position: relative;
+    /* width: 360px; */
+    z-index: 10;
+}
+.loginbox h2{
+    text-align: center;
+    font-size:36px;
+    margin:30px 0;
+    color:white;
+}
+.loginbox .inputBox{
+    position: relative;
+    width:100%;
+    background: #fff;
+    padding:5px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+.loginbox .inputBox input {
+    position:relative;
+    width:100%;
+    outline: none;
+    border:none;
+    padding:10px 5px;
+}
+.loginbox .inputBox #toggleBtn{
+    position: absolute;
+    top:40px;
+    right:10px;
+    width:34px;
+    height:34px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginbox .inputBox #toggleBtn::before{
+    content: "\f06e";
+    font-family: fontAwesome;
+}
+.loginbox .inputBox #toggleBtn.hide::before{
+    content: "\f070";
+    font-family: fontAwesome;
+}
+.validation{
+    background: rgb(128, 128, 128);
+    padding:10px;
+    margin-top:30px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+.validation ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+.validation ul li{
+    position: relative;
+    color:#fff;
+    font-size:0.85em;
+    transition: 0.5s;
+}
+.validation ul li.valid{
+    color:rgba(255, 255, 255, 0.5)
+}
+
+.validation ul li::before{
+    content: "\f192";
+    font-family: fontAwesome;
+    width:20px;
+    height: 10px;
+    display: inline-flex;
+}
+.validation ul li.valid::before{
+    content: "\f00c";
+    color:#0f0;
+}
+h2>a{
+    display: block;
+    color:white;
+}
+h2 img{
+    width:60px;
+}
+.loginButton input{
+    width:100%;
+    height:40px;
+    margin:15px 0;
+}
+.loginHelp{
+    display: flex;
+    justify-content: space-around;
+    color:rgb(201, 201, 201);
+}
+.loginHelp>li:hover{
+    color:white;
+    cursor: pointer;
+}
+/* -----------footer---------- */
+footer{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top:10px;
+}
+footer>.mobile{
+    display: none;
+}
+.footerNav{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    padding:5px 0;
+    font-size:12px;
+}
+.footerNav>li>a{
+    color:rgb(218, 218, 218);
+}
+.footerNav>li:hover>a{
+    display: block;
+    color:#eee;
+}
+.footerAddress{
+    font-size:13px;
+    font-weight: 200;   
+    margin-top:10px;
+}
+.footerNav a{
+    color:rgb(124, 124, 124)
+}
+footer>div{
+    padding:20px 0; 
+}
+footer>div>span:nth-child(2){
+    font-size:20px;
+}
+.footerTitle{
+    font-size:16px;
+}
+.footerTitle>a{
+    color:rgb(253, 212, 212);
+}
+.footerCopyright{
+    font-size:13px;
+}
+@media screen and (max-width:767px) {
+    footer>.web{
+        display: none;
+    }
+    footer>.mobile{
+        display: flex;
+        font-size:14px;
+    }
+}
+@media screen and (max-width:410px) {
+    footer{
+        display: none;
+    }
+    .loginbox h2{
+        margin:10px 0;
+    }
+}

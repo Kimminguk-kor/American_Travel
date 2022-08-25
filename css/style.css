@@ -1,0 +1,906 @@
+body{
+     max-width: 1920px;
+     background: black;
+}
+.innerBox{
+     max-width: 1620px;
+     margin:0 auto;
+     position: relative;
+}
+.innerParallaxBox{
+     max-width: 1200px;
+     margin:0 auto;
+}
+/* --------header------- */
+
+.logo{
+     text-align: center;
+     padding: 10px 0;
+     font-size: 36px;
+     font-weight: 700;
+}
+.logo p{
+     display: inline;
+     margin-left:10px;
+}
+#nav{
+     display: none;
+     position: fixed;
+     text-align: center;
+     background: rgba(0, 0, 0, 0.7);
+     top:0;
+     left:0;
+     z-index: 1000;
+     height: 100%;
+     width:30%;
+     padding-top:4%;
+     transition: 1s;
+}
+#nav>li{
+     width:80%;
+     padding:20px 20px 0 20px;
+     margin:0 auto;
+}
+#nav>li>a{
+     display: block;
+     font-size:21px;
+     font-weight: 700;
+     background-image: url(../images/navArr_down.png); 
+     background-position: right;
+     background-repeat: no-repeat;
+}
+#nav>.active>a{
+     background-image: url(../images/navArr_up.png);
+}
+.sub{
+     display: none;
+     text-align: center;
+}
+.sub>li{
+     width:100%;
+     padding:15px 0;
+}
+.sub>li>a{
+     font-size: 15px;
+     font-weight: 500;
+     display: block;
+     color:#ddd;
+}
+.sub>li>a:hover{
+     color:white;
+}
+.navImg{
+     width:100%;
+     height: 100%;
+     margin: 30px auto;
+}
+.navImg>li:nth-child(1)::after{
+     content: "";
+     display: block;
+     background-image: url(../images/flagBg1920x1080.jpg);
+     background-repeat: no-repeat;
+     background-size: contain;
+     width: 100%;
+     height: 28vh;
+}
+.navImg>li:last-child:after{
+     content:"American Travel에 접속하신것을 환영합니다.";
+     display: block;
+     padding:20px 0;
+     font-size:16px;
+     font-weight: 500;
+}
+.rightGnb{
+     display: flex;
+     position: absolute;
+     right:0;
+     top:1%;
+}
+.loginBox{
+     display: block;
+     padding: 10px 15px;
+}
+.logo a,
+#nav>li>a,
+.rightGnb span,
+.hamBox a{
+     color:white;
+}
+.hamBox a,
+.rightGnb span{
+     font-size:16px;
+}
+.hamBox{
+     position: fixed;
+     display: flex;
+     top:1%;
+     z-index: 10000;
+     margin-left:2%;
+}
+.hamText{
+     margin:5px 10px 0;
+}
+.hamBox>a{
+     display: block;
+}
+.hamBox>a>span{
+     display: block;
+     width:32px;
+     height: 5px;
+     background: white;
+     margin:8px 0;
+     transition:0.5s;
+}
+.hamBox>.active>span:first-child{
+     transform: rotate(45deg) translateY(12px) translateX(6px);
+}
+.hamBox>.active>span:nth-child(2){
+     opacity:0;
+}
+.hamBox>.active>span:last-child{
+     transform: rotate(-45deg) translateY(-12px) translateX(6px);
+}
+.blindArrBox{
+     opacity: 0;
+}
+/* .----------firstWrap----------- */
+.firstSection{
+     max-height: 1080px;
+     height: 100%;
+     width: 100%;
+}
+.bgBox{
+     position: relative;
+     width:100%;
+}
+.firstSection>.mobile{
+     display: none;
+}
+.bgBoxImg{
+     position: absolute;
+     max-width: 1920px;
+     width:100%;
+}
+.bgBoxImg>img{
+     width:100%;
+     max-height: 1040px;
+     height: 100%;
+}
+.firstSection>.innerBox{
+     z-index: 100;
+}
+/* ------gridBannerImg------ */
+
+.mainBannerWrap>div{
+     max-width:1640px;
+     width:100%;
+     height: 100%;
+     padding:10px;
+     box-sizing: border-box;
+     display: none;
+ }
+.mainBannerWrap>.mainBanner.active{
+     display: grid;
+ }
+ .mainBanner>.subBanner01{
+     max-width: 350px;
+     max-height: 245px;
+     width:100%;
+     height: 100%;
+     grid-column: 2/3;
+ }
+ .mainBanner>.subBanner01:hover::after,
+ .mainBanner>.subBanner02:hover::after,
+ .mainBanner>.subBanner03:hover::after,
+ .mainBanner>.subBanner04:hover::after,
+ .mainBanner>.subBanner05:hover::after,
+ .mainBanner>.subBanner06:hover::after,
+ .mainBanner>.subBanner07:hover::after,
+ .mainBanner>.subBanner08:hover::after,
+ .mainBanner>.subBanner09:hover::after,
+ .mainBanner>.subBanner10:hover::after,
+ .mainBanner>.subBanner11:hover::after,
+ .mainBanner>.subBanner12:hover::after{
+     content: "해당 페이지로 이동하기";
+     border-radius: 20px;
+     font-size:14px;
+     font-weight: 300;
+     position: absolute;
+     text-align: center;
+     text-shadow: 2px 2px 2px black;
+     background: rgba(0, 0, 0, 0.4);
+     width:80%;
+     left:50%;
+     top:20%;
+     transform: translateX(-50%); 
+ }
+ .mainBanner>.subBanner02{
+     max-width: 360px;
+     max-height: 245px;
+     grid-column: 3/4;
+ }
+ .mainBanner>.subBanner03{
+     max-width: 300px;
+     max-height: 245px;
+     grid-column: 4/5;
+ }
+ .mainBanner>.subBanner04{
+     max-width: 280px;
+     max-height: 400px;
+     grid-column:5/6;
+     grid-row: 1/3;
+     margin-top:17%;
+ }
+ .mainBanner>.subBanner05{
+     max-width: 260px;
+     max-height: 220px;
+     grid-column: 1;
+ }
+ .mainBanner>.subBanner06{
+     max-width: 288px;
+     max-height: 402px;
+     grid-column: 2;
+     grid-row:2/4;
+ }
+ .mainBanner>.subBanner07{
+     max-width: 280px;
+     max-height: 220px;
+     grid-column: 3/4;
+ }
+ .mainBanner>.subBanner08{
+     max-width: 320px;
+     max-height: 220px;
+     grid-column: 4/5;
+     margin-right:-0.5%;
+ }
+ .mainBanner>.subBanner09{
+     max-width: 240px;
+     max-height: 240px;
+     margin-top:-23%;
+     grid-column: 6/6;
+ }
+ .mainBanner>.subBanner10{
+     max-width: 230px;
+     max-height: 185px;
+     grid-column: 3/4;
+ }
+ .mainBanner>.subBanner11{
+     max-width: 340px;
+     max-height: 185px;
+     grid-column: 4/5;
+     margin-left:-20%;
+ }
+ .mainBanner>.subBanner12{
+     max-width: 280px;
+     max-height: 200px;
+     grid-column: 5/6;
+     margin-top:-5%;
+ }
+ .mainBanner img{
+     width:100%;
+     height: 100%;
+ }
+
+/* -----------mainBannerPagerText------------ */
+.pagerWrap > .mobile{
+     display: none;
+}
+.mainBannerPagerText{
+     display: flex;
+     position: absolute;
+     bottom:-10%;
+     width:100%;
+     z-index: 100;
+}
+.mainBannerPagerText>div{
+     width:25%;
+     text-align: center;
+}
+.mainBannerPagerText>.pager.active>a{
+     color:white;
+}
+.mainBannerPagerText a{
+     color:rgb(192, 192, 192);
+     font-size:18px;
+}
+.mainBannerPagerText img{
+     padding-right:20px;
+}
+/* ----------secondSection secondWrap---------- */
+.secondSection{
+     display: block;
+     max-height: 1080px;
+     height: 100%;
+     width:100%;
+     margin-top:15%;
+}
+.secondSection>.innerBox>h2{
+     text-align: center;
+     font-size:36px;
+     padding:50px 0;
+}
+.secondWrap{
+     display: flex;
+     justify-content: space-between;
+     width:100%;
+     margin-bottom: 10%;
+}
+.secondWrap img{
+     width:100%;
+}
+.secondWrap p{
+     font-size:18px;
+     padding:20px 0;
+     text-align: center;
+}
+.newyork_hover{
+     position: relative;
+     max-width: 450px;
+     max-height: 600px;
+     width:100%;
+     height: 100%;
+     overflow: hidden;
+}
+.newyork_hover::after{
+     content: "";
+     display: block;
+     position: absolute;
+     bottom: 10%;
+     width:100%;
+     height: 0;
+     background: rgb(201, 201, 201, 0.3);
+     transition: 0.5s;
+}
+.newyork_hover:hover::after{
+     height: 50%;
+     content: "세계인이 가장 가고 싶어하는 도시!";
+     font-size:18px;
+     line-height: 15;
+     text-align: center;
+     box-sizing: border-box;
+     text-shadow: 1px 1px 1px black;
+}
+.park_hover{
+     position: relative;
+     max-width: 450px;
+     max-height: 600px;
+     width:100%;
+     height: 100%;
+     overflow: hidden;
+}
+.park_hover::after{
+     content: "";
+     display: block;
+     position: absolute;
+     bottom: 10%;
+     width:100%;
+     height: 0;
+     background: rgb(201, 201, 201, 0.3);
+     transition: 0.5s;
+}
+.park_hover:hover::after{
+     height: 50%;
+     content: "세계에서 가장 거대한 영화 도시!";
+     font-size:18px;
+     line-height: 15;
+     /* padding-top:50%; */
+     text-align: center;
+     box-sizing: border-box;
+     text-shadow: 1px 1px 1px black;
+}
+.hawaii_hover{
+     position: relative;
+     max-width: 450px;
+     max-height: 600px;
+     width:100%;
+     height: 100%;
+     overflow: hidden;
+}
+.hawaii_hover::after{
+     content: "";
+     display: block;
+     position: absolute;
+     bottom: 10%;
+     width:100%;
+     height: 0;
+     background: rgb(201, 201, 201, 0.3);
+     transition: 0.5s;
+}
+.hawaii_hover:hover::after{
+     height: 50%;
+     content: "신혼여행 선호도 1위의 아름다운 섬";
+     font-size:18px;
+     line-height: 15;
+     text-align: center;
+     box-sizing: border-box;
+     text-shadow: 1px 1px 1px black;
+}
+
+
+/* ------------thirdSection----------- */
+.thirdSection{
+     max-height: 1080px;
+     height: 100%;
+     width: 100%;
+     margin-bottom: 10%;
+}
+
+.thirdWrap{
+     text-align: center;
+}
+.thirdWrap h2{
+     font-size: 36px;
+     font-weight: 600;
+     padding-top:30px;
+}
+.thirdWrap .thrText01{
+     font-size:22px;
+     font-weight: 400;
+     padding:15px 0;
+}
+.thirdWrap .thrText02{
+     font-size:14px;
+     font-weight: 200;
+}
+.thirdWrap .thrText02>span{
+     font-weight: 400;
+}
+.thirdIntroBox{
+     margin-bottom: 4%;
+}
+.thirdBannerBox{
+     margin:10px;
+}
+.thirdBannerBox img{
+     transition: 1s;
+     width:100%;
+     height: 100%;
+}
+.thirdBannerBox p{
+     padding-top:5px;
+     font-size:14px;
+}
+/* -----------parallax01------------ */
+.parallaxBox .mobile{
+     display: none;
+}
+.parallax01{
+     margin-top:50px;
+}
+.parallaxBox{
+     box-sizing: border-box;
+     line-height: 3;
+     width:60%;
+     margin:0 auto;
+}
+.innerParallaxBox01{
+     padding-top:18%;
+}
+.innerParallaxBox02{
+     padding-top:10%;
+}
+.innerParallaxBox01,
+.innerParallaxBox02{
+     font-size:18px;
+     font-weight: 300;
+     text-align: center;
+     line-height: 2;
+}
+/* -----------footer---------- */
+footer{
+     width: 100%;
+     height: 340px;
+     background: black;
+     text-align: center;
+}
+footer .mobile{
+     display: none;
+}
+.footerNav{
+     display: flex;
+     justify-content: space-evenly;
+     width:50%;
+     transform: translateX(50%);
+     padding:30px 0;
+     font-size:14px;
+}
+.footerNav>li:hover>a{
+     display: block;
+     color:#eee;
+}
+.footerAddress{
+     font-size:14px;
+     color:rgb(201, 201, 201);    
+}
+footer>div{
+     padding:20px 0;
+     color:rgb(201, 201, 201);  
+}
+footer>div>span:nth-child(2){
+     font-size:20px;
+}
+/* --------parallex-window--------- */
+.parallaxBox{
+     min-height: 70vh;
+}
+.parallax-window{
+     height: 400px;
+     background: transparent;
+}
+.parallax-mobile{
+     display: none;
+}
+/* --------icon size-------- */
+.logo img{
+     width:40px;
+     margin-top:10px;
+}
+.user{
+     width:30px;
+     margin-top:5px;
+}
+.hamBtn img {
+     width:30px;
+} 
+.mainBannerPagerText img{
+     width:35px;
+     margin-top:-5px;
+}
+.mainBannerPagerText>div:nth-child(3) img{
+     width:45px;
+}
+.mainbanner_newyork{
+     width:100%;
+}
+@media screen and (max-width:1280px) {
+     .firstSection{
+          max-height: 800px;
+     }
+     .mainBanner{
+          margin:0% auto;
+     }
+     .navImg>li:last-child:after{
+          font-size:15px;
+     }
+     .newyork_hover,
+     .park_hover,
+     .hawaii_hover{
+          max-width:360px;
+          max-height: 500px;
+     }
+     .newyork_hover::after,
+     .park_hover::after,
+     .hawaii_hover::after{
+          bottom:13%;
+     }
+     .newyork_hover:hover::after,
+     .park_hover:hover::after,
+     .hawaii_hover:hover::after{
+          font-size:16px;
+          line-height: 15;
+     }
+     .secondWrap p{
+          font-size: 16px;
+     }
+     .innerParallaxBox01,
+     .innerParallaxBox02{
+          font-size: 16px;
+     }
+}
+@media screen and (max-width:1090px) {
+     #nav{
+          width: 50%;
+     }
+     .navImg>li:nth-child(1)::after{
+          height: 38vh;
+     }
+     .newyork_hover,
+     .park_hover,
+     .hawaii_hover{
+          max-width:320px;
+          max-height: 400px;
+     }
+     .parallaxBox{
+          width:80%;
+     }
+}
+@media screen and (max-width:970px) {
+     .newyork_hover,
+     .park_hover,
+     .hawaii_hover{
+          max-width:250px;
+          max-height: 350px;
+     }
+     .innerParallaxBox01,
+     .innerParallaxBox02{
+          font-size:15px;
+     }
+     .footerNav{
+          width:70%;
+          transform:translateX(22%)
+     }
+}
+@media screen and (max-width:800px) {
+     .pagerWrap > .mobile{
+          display: flex;
+          border-bottom: 1px solid white;
+          padding-bottom: 10px;
+     }
+     .pagerWrap > .web{
+          display: none;
+     }
+}
+@media screen and (max-width:768px) {
+     .secondSection{
+          margin-top:15%;
+     }
+     .firstSection>.mobile{
+          display: block;
+     }
+     .mainBannerPagerText a{
+          font-size: 16px;
+     }
+     .hamBox>.active>span:first-child{
+          transform: rotate(43deg) translateY(10.5px) translateX(5px);
+     }
+     .hamBox>.active>span:last-child{
+          transform: rotate(-43deg) translateY(-10.5px) translateX(5px);
+     }
+     #nav>li>a{
+          font-size:16px;
+     }
+     .hamBox>a>span{
+          width:24px;
+          height: 3px;
+     }
+     .navImg{
+          margin:0 auto;
+     }
+     .navImg>li:nth-child(1)::after{
+          width:100%;
+          height: 35vh;
+     }
+     .navImg>li:last-child:after{
+          font-size:14px;
+          padding:20px 0;
+     }
+     .sub>li>a{
+          font-size: 13px;
+     }
+     .newyork_hover,
+     .park_hover,
+     .hawaii_hover{
+          max-width:250px;
+          max-height: 350px;
+     }
+     .newyork_hover:hover::after,
+     .park_hover:hover::after,
+     .hawaii_hover:hover::after{
+          font-size:14px;
+          line-height: 10;
+     }
+     .secondWrap p{
+          font-size: 14px;
+     }
+     .thirdSection{
+          margin-top:5%;
+     }
+     .bgBoxImg>img{
+          height: 85%;
+     }
+     .parallaxBox{
+          width:80%;
+     }
+     .innerParallaxBox01,
+     .innerParallaxBox02{
+          word-break: keep-all;
+          font-size:16px;
+          padding-top:25%;
+     }
+     .innerParallaxBox02:hover a{
+          color:rgb(90, 90, 250);
+     }
+     .parallaxBox .web{
+          display: none;
+     }
+     .parallaxBox .mobile{
+          display: block;
+     }
+     .footerNav{
+          width:90%;
+          transform:translateX(6%)
+     }
+}
+@media screen and (max-width:680px) {
+     .logo{
+          font-size: 28px;
+     }
+     
+}
+@media screen and (max-width:530px) {
+     .mainBannerPagerText{
+          bottom:-15%;
+     }
+     .logo img{
+          width: 30px;
+     }
+     #nav{
+          width:100%;
+     }
+     .navImg>li:nth-child(1)::after{
+          height: 55vh;
+     }
+     .detailCommon p:first-child{
+          word-break: keep-all;
+     }
+     footer .web{
+          display: none;
+     }
+     footer .mobile{
+          display: flex;
+          justify-content: space-evenly;
+          line-height: 2;
+     }
+}
+@media screen and (max-width:440px) {
+     .logo{
+          font-size: 22px;
+     }
+     .logo img{
+          width:22px;
+          margin-top:8px;
+     }
+     .mainBannerPagerText a{
+          font-size: 14px;
+     }
+}
+@media screen and (max-width:360px){
+     .logo{
+          font-size:18px;
+     }
+     .logo img{
+          margin-top:4px;
+     }
+     .hamBtn img{
+          width:20px;
+          margin-left:5px;
+     }
+     .mainBannerPagerText{
+          bottom:-12%;
+     }
+     .mainBannerPagerText img,
+     .mainBannerPagerText>div:nth-child(3) img{
+          width:20px;
+          display: block;
+     }
+     .mainBannerPagerText img{
+          padding-left:35px;
+     }
+     .mainBannerPagerText a{
+          font-size: 12px;
+     }
+     .hamText{
+          margin-top:-1px;
+          margin-left:5px;
+     }
+     .hamBox a, .rightGnb span{
+          font-size:12px;
+     }
+     .rightGnb{
+          top:3%;
+     }
+     .loginBox{
+          padding:5px 10px;
+          text-indent: -9999px;
+     }
+     .user{
+          width:20px;
+          margin-right:3px;
+     }
+     #nav{
+          width: 100%;
+     }
+     .navImg>li:nth-child(1)::after{
+          height: 30vh;
+     }
+     .secondSection{
+          margin-top:30%;
+     }
+     .secondSection>.innerBox>h2{
+          font-size:18px;
+          padding:5px 0;
+     }
+     .mainBanner>.subBanner01:hover::after,
+     .mainBanner>.subBanner02:hover::after,
+     .mainBanner>.subBanner03:hover::after,
+     .mainBanner>.subBanner04:hover::after,
+     .mainBanner>.subBanner05:hover::after,
+     .mainBanner>.subBanner06:hover::after,
+     .mainBanner>.subBanner07:hover::after,
+     .mainBanner>.subBanner08:hover::after,
+     .mainBanner>.subBanner09:hover::after,
+     .mainBanner>.subBanner10:hover::after,
+     .mainBanner>.subBanner11:hover::after,
+     .mainBanner>.subBanner12:hover::after{
+         content: "이동하기";
+         border-radius: 20px;
+         font-size:11px;
+         font-weight: 300;
+         position: absolute;
+         text-align: center;
+         text-shadow: 2px 2px 2px black;
+         background: rgba(0, 0, 0, 0.4);
+         width:80%;
+         left:50%;
+         top:20%;
+         transform: translateX(-50%); 
+     }
+     .newyork_hover,
+     .park_hover,
+     .hawaii_hover{
+          max-width:120px;
+          max-height: 180px;
+     }
+     .newyork_hover:hover::after,
+     .park_hover:hover::after,
+     .hawaii_hover:hover::after{
+          font-size:10px;
+          align-items: center;
+          bottom:20%;
+     }
+     .newyork_hover:hover::after{
+          content: "가장 가고 싶은 도시!";
+     }
+     .park_hover:hover::after{
+          content:"가장 거대한 영화 도시!"
+     }
+     .hawaii_hover:hover::after{
+          content:"신혼여행 선호도 1위!"
+     }
+     .secondWrap p{
+          font-size: 12px;
+          padding:10px 0;
+     }
+     .thirdWrap h2{
+          font-size:18px;
+     }
+     .thirdWrap .thrText01{
+          font-size: 15px;
+     }
+     .thirdWrap .thrText02{
+          font-size: 12px;
+     }
+     .thirdBannerBox p{
+          font-size: 12px;
+     }
+     .parallax-window{
+          display: none;
+     }
+     .parallax-mobile{
+          display: block;
+          width:360px;
+          height: 300px;
+     }
+     .parallaxBox{
+          height: 55vh;
+     }
+     .innerParallaxBox01, .innerParallaxBox02{
+          font-size: 12px;
+          padding-top:25%;
+          box-sizing: border-box;
+     }
+     .footerNav{
+          width: 90%;
+          font-size: 11px;
+     }
+     .footerAddress{
+          font-size: 12px;
+     }
+     footer>div>span:nth-child(2){
+          font-size: 18px;
+          font-weight: 500;
+     }
+     footer>div{
+          font-size:12px;
+     }
+}
