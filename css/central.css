@@ -33,9 +33,10 @@
   width: 100%;
   height: 100%;
 }
-.centralBgBox > li:nth-child(2),
-.centralBgBox_tab > li:nth-child(2),
-.centralBgBox_m > li:nth-child(2) {
+.centralBgBox > li:nth-child(1)::after,
+.centralBgBox_tab > li:nth-child(1)::after,
+.centralBgBox_m > li:nth-child(1)::after {
+  content: "";
   position: absolute;
   background-color: black;
   z-index: 10;
@@ -70,7 +71,7 @@
 /* -----cpIntroBox----- */
 .cpIntroBox {
   position: absolute;
-  bottom: -18%;
+  bottom: -5%;
   left: 10%;
 }
 .cpIntroBox > p {
@@ -102,7 +103,7 @@
 
 /* -----cpSecondSection----- */
 .cpSecondSection {
-  padding-top: 10%;
+  padding-top: 15%;
 }
 .cpSecondSection > .innerBox > h2 {
   padding-bottom: 10px;
@@ -263,6 +264,9 @@
     width: 90%;
     height: 90%;
   }
+  .cpIntroBox{
+    bottom:20%;
+  }
   .popupBox02 {
     right: 0;
   }
@@ -302,9 +306,6 @@
   .hamBox a,
   .rightGnb span {
     font-size: 13px;
-  }
-  .cpIntroBox {
-    bottom: -10%;
   }
   .cpIntroBox > p:nth-child(1) {
     font-size: 48px;
@@ -423,10 +424,12 @@
     max-width: 270px;
     max-height: 270px;
   }
-  .detailCommon p:first-child {
+  .detailCommon p:first-child,
+  .detailCommon .detail_title {
+    font-size: 18px;
+    font-weight: 500;
     font-size: 13px;
     word-break: keep-all;
-    font-weight: 300;
     line-height: 2;
   }
   .detailImg01 > div:nth-child(2),
@@ -449,5 +452,8 @@
   .popupImg01 a,
   .popupImg02 a {
     font-size: 13px;
+  }
+  .cpUnderText>p{
+    font-size: 12px;
   }
 }

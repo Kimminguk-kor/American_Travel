@@ -79,10 +79,10 @@
     float: left;
     height: 100%;
     min-height: 1px;
-    padding:15px;
+    padding:10px;
 }
 .slick-slide img{
-    padding:40px;
+    padding:20px;
     box-sizing: border-box;
 }
 .slick-center img{

@@ -27,7 +27,7 @@ body{
      display: none;
      position: fixed;
      text-align: center;
-     background: rgba(0, 0, 0, 0.7);
+     background: rgba(0, 0, 0, 0.9);
      top:0;
      left:0;
      z-index: 1000;
@@ -106,9 +106,8 @@ body{
 .hamBox a{
      color:white;
 }
-.hamBox a,
 .rightGnb span{
-     font-size:16px;
+     font-size:14px;
 }
 .hamBox{
      position: fixed;
@@ -125,20 +124,20 @@ body{
 }
 .hamBox>a>span{
      display: block;
-     width:32px;
-     height: 5px;
+     width:26px;
+     height: 3px;
      background: white;
      margin:8px 0;
      transition:0.5s;
 }
 .hamBox>.active>span:first-child{
-     transform: rotate(45deg) translateY(12px) translateX(6px);
+     transform: rotate(45deg) translateY(10px) translateX(6px);
 }
 .hamBox>.active>span:nth-child(2){
      opacity:0;
 }
 .hamBox>.active>span:last-child{
-     transform: rotate(-45deg) translateY(-12px) translateX(6px);
+     transform: rotate(-45deg) translateY(-10px) translateX(6px);
 }
 .blindArrBox{
      opacity: 0;
@@ -886,7 +885,7 @@ footer>div>span:nth-child(2){
      }
      .innerParallaxBox01, .innerParallaxBox02{
           font-size: 12px;
-          padding-top:25%;
+          padding-top:50%;
           box-sizing: border-box;
      }
      .footerNav{
