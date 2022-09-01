@@ -24,7 +24,6 @@ body{
 }
 .loginbox{
     position: relative;
-    /* width: 360px; */
     z-index: 10;
 }
 .loginbox h2{
