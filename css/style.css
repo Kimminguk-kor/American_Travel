@@ -34,6 +34,17 @@ body{
      height: 100%;
      width:30%;
      padding-top:4%;
+     /* transition: 1s; */
+}
+#nav::before{
+     content: "";
+     position: fixed;
+     background: rgba(0, 0, 0, 0.4);
+     top:0;
+     right:0;
+     z-index: 900;
+     width:70%;
+     height:100%;
      transition: 1s;
 }
 #nav>li{
@@ -589,6 +600,9 @@ footer>div>span:nth-child(2){
      #nav{
           width: 50%;
      }
+     #nav::before{
+          width:50%;
+     }
      .navImg>li:nth-child(1)::after{
           height: 38vh;
      }
@@ -724,6 +738,9 @@ footer>div>span:nth-child(2){
      }
      #nav{
           width:100%;
+     }
+     #nav::before{
+          width:0%;
      }
      .navImg>li:nth-child(1)::after{
           height: 55vh;

@@ -11,9 +11,9 @@ $(function () {
   });
   $(".hamBox").click(function () {
     if ($("#nav").css("display") == "none") {
-      $("#nav").show(500); //display :none 일떄
+      $("#nav").show(0); //display :none 일떄
     } else {
-      $("#nav").hide(500); //display :block 일떄
+      $("#nav").hide(0); //display :block 일떄
     }
   });
   $(".hamBox").click(function () {
